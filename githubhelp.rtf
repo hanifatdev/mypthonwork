@@ -1,0 +1,86 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fswiss\fcharset0 Helvetica;\f2\fnil\fcharset0 Menlo-Italic;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;\red251\green0\blue7;
+\red255\green255\blue255;\red18\green31\blue60;\red27\green29\blue31;\red235\green236\blue237;\red255\green0\blue0;
+\red109\green109\blue109;}
+{\*\expandedcolortbl;;\csgray\c0;\csgray\c100000;\cssrgb\c100000\c0\c0;
+\cssrgb\c100000\c100000\c100000;\cssrgb\c9020\c16863\c30196;\cssrgb\c14118\c15294\c16078;\cssrgb\c93725\c94118\c94510;\csgenericrgb\c100000\c0\c0;
+\csgenericrgb\c42745\c42745\c42745;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww20380\viewh13720\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf2 \cb3 \CocoaLigature0 \
+
+\f1\fs24 \cf0 \cb1 \CocoaLigature1  \
+\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+Change the remote url of git repo\
+\
+1-  
+\f0\fs28 \cf4 \cb5 \expnd0\expndtw0\kerning0
+git remote -v\cf6 \'a0\
+2-\cf4 git remote set-url origin git@bitbucket.org: YOUR NEW URL\
+3-  or open 
+\fs26 \cf7 \cb8 .git/config
+\f1\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0   
+\f0\fs28 \cf4 \cb5 \expnd0\expndtw0\kerning0
+open the change the url under url=YOUR NEW URL \
+		\cf9 [
+\fs26 \cb8 remote "origin"]\
+\pard\pardeftab720\sl300\partightenfactor0
+\cf9 		fetch = +refs/heads/*:refs/remotes/origin/* (optional)\
+		url = ssh://oldhost.com/usr/local/gitroot/myproject.git  (\'97\'97> must change with 
+\fs28 \cf4 \cb5 YOUR NEW URL
+\fs26 \cf9 \cb8 )\cf7 \
+And then check\
+		that you have created ssh key and configure it with GitHub or Bitbucket, if not then create it by using the commands\
+\
+		
+\f1\fs24 \cf9 \cb1 \kerning1\expnd0\expndtw0 1- ssh-keygen -t rsa\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf9 		2- pbcopy < ~/.ssh/id_rsa.pub. (to copy the text in clipboard)\
+\
+\
+		
+\f0\fs26 \cf7 \cb8 \expnd0\expndtw0\kerning0
+configure it with GitHub or Bitbucket\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+4- Then configure your email and name by running the following commands\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f2\i \cf10 		\cf9 1- git config --global user.email aliatmacdev@gmail.com \
+		2- git config --global user.name Rashid Ali \cf10 \
+	\
+	to set your account's default identity. \
+\
+		\cf9 3- Omit --global (optional) \cf10 \
+	\
+	to set the identity only in this repository.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\i0 \cf0 \
+\
+\
+\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+Create new local branch from remote repo origin/master:\
+	\
+	Run the following commands:\
+\
+	\cf9 1- git fetch\
+	2- Click the option from bottom-right cornor \'93Git:\'97\'97\'97\'94 \'97\'97\'97>. Remote branches \'97\'97> checkout as new local branch\cf0 \
+\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+push to origin master was rejected by remote bitbucket\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf9 	1-
+\f0\fs22 \cb3 \CocoaLigature0 git push --set-upstream origin GiveFeedback   (where GiveFeedback is your local branch)}
